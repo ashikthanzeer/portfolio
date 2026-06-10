@@ -4,11 +4,11 @@
 TBD - created by archiving change document-existing-portfolio. Update Purpose after archive.
 ## Requirements
 ### Requirement: Personal Branding Header
-The portfolio landing page SHALL display the user's name "ASHIK MUHAMMED T", description "CS Undergrad at CET. BS DS Student at IITM.", and a prominent "View Resume" button (pointing to `resume.html`) at the top of the page.
+The portfolio landing page SHALL display the user's name "ASHIK MUHAMMED T", description "CS Undergrad at CET. BS DS Student at IITM.", and a prominent "View Resume" button (pointing directly to the static PDF file `Ashik_Muhammed_T_Resume_A4.pdf`) at the top of the page.
 
 #### Scenario: Landing Page Load
 - **WHEN** a user visits the portfolio URL
-- **THEN** the heading "ASHIK MUHAMMED T", description, and "View Resume" link MUST be visible at the top.
+- **THEN** the heading "ASHIK MUHAMMED T", description, and "View Resume" link (pointing directly to the PDF resume and opening in a new tab) MUST be visible at the top.
 
 ### Requirement: Social Media Navigation Links
 The landing page SHALL include clickable social media icons linking directly to the user's external GitHub and LinkedIn profiles in a new browser tab.
@@ -22,9 +22,9 @@ The landing page SHALL include clickable social media icons linking directly to 
 - **THEN** a new browser tab MUST open navigating to `https://linkedin.com/in/ashikthanzeer`.
 
 ### Requirement: Aesthetics and Dark Theme Styling
-The portfolio page SHALL render with a high-tech, futuristic dark theme featuring a fixed, rotated abstract blue-black paint texture background, neon cyan/amber accents, glowing interactive elements, and responsive layout.
+The portfolio page SHALL render with a high-tech, futuristic dark theme featuring a visible, fixed, rotated abstract blue-black paint texture background, neon cyan/amber accents, glowing interactive elements, and responsive layout.
 
 #### Scenario: Styling Verification
 - **WHEN** the landing page is rendered
-- **THEN** it MUST display the rotated blue-black texture image as a background layer with low opacity (to ensure text legibility) behind the content grid.
+- **THEN** it MUST display the rotated blue-black texture image visibly as a background layer with low opacity behind the content grid, without being hidden by body solid color overrides.
 

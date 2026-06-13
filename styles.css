@@ -34,7 +34,7 @@
 
 html {
     scroll-behavior: smooth;
-    background-color: var(--bg-color);
+    background-color: transparent;
 }
 
 body {
@@ -46,21 +46,24 @@ body {
     padding: 60px 20px;
 }
 
-body::before {
-    content: '';
+.video-bg-container {
     position: fixed;
-    top: -50vh;
-    left: -50vw;
-    width: 200vw;
-    height: 200vh;
-    background: url('bg.jpg') no-repeat center center;
-    background-size: cover;
-    transform: rotate(90deg);
-    transform-origin: center center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: -3;
-    opacity: 0.15;
-    filter: brightness(0.6) contrast(1.3);
+    overflow: hidden;
     pointer-events: none;
+    background-color: var(--bg-color);
+}
+
+.video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    filter: brightness(1) contrast(1.2);
 }
 
 /* Background Grids & Scanlines */

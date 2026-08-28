@@ -762,6 +762,14 @@ body {
     
     .section-title {
         font-size: 1.3rem;
+        display: block;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .section-title i {
+        display: inline-block;
+        margin-right: 8px;
     }
     
     .cyber-panel, .skill-card, .project-card {

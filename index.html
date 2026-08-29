@@ -267,12 +267,9 @@
             <h2 class="section-title"><i class="fa-solid fa-trophy"></i> COMPETITIONS</h2>
             <div class="competition-grid">
                 <article class="competition-card">
-                    <div class="competition-certificate">
-                        <img src="ISRO_BAH_Hackathon.png" alt="Certificate for Bharatiya Antariksh Hackathon 2026">
-                    </div>
                     <div class="competition-content">
                         <div class="competition-header">
-                            <span class="competition-label">FIRST HACKATHON</span>
+                            <span class="competition-label">HACKATHON</span>
                             <h3>Bharatiya Antariksh Hackathon 2026</h3>
                             <p class="competition-organizer">Conducted by ISRO &bull; Powered by Hack2skill</p>
                         </div>
@@ -280,10 +277,15 @@
                             <p><strong>Role:</strong> Team Lead</p>
                             <p><strong>Team:</strong> 4 members</p>
                         </div>
-                        <a class="project-link demo-link" href="https://certificate.hack2skill.com/verify/2026H2S06BAH-P11905"
-                            target="_blank" rel="noopener noreferrer">
-                            <i class="fa-solid fa-certificate"></i> Verify Credential
-                        </a>
+                        <div class="competition-actions">
+                            <button class="certificate-trigger" type="button" onclick="openPopup('certificatepopup')">
+                                <i class="fa-solid fa-certificate"></i> View Certificate
+                            </button>
+                            <a class="project-link demo-link" href="https://certificate.hack2skill.com/verify/2026H2S06BAH-P11905"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-solid fa-certificate"></i> Verify Credential
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -385,6 +387,16 @@
                     <li><strong>CUSAT CAT 2025:</strong> Rank 335</li>
                 </ul>
             </div>
+        </div>
+    </div>
+
+    <div class="popup certificate-popup" id="certificatepopup">
+        <div class="popup-content certificate-popup-content">
+            <span class="close" onclick="closePopup('certificatepopup')">&times;</span>
+            <div class="popup-icon"><i class="fa-solid fa-award"></i></div>
+            <h2>Certificate</h2>
+            <h3>Bharatiya Antariksh Hackathon 2026</h3>
+            <img class="certificate-image" src="ISRO_BAH_Hackathon.png" alt="Certificate for Bharatiya Antariksh Hackathon 2026">
         </div>
     </div>
 

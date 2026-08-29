@@ -482,9 +482,6 @@ body {
 }
 
 .competition-card {
-    display: grid;
-    grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
-    gap: 28px;
     padding: 24px;
     background: var(--card-bg);
     border: 1px solid var(--panel-border);
@@ -500,24 +497,44 @@ body {
     transform: translateY(-5px);
 }
 
-.competition-certificate {
-    align-self: center;
-    overflow: hidden;
-    border: 1px solid rgba(0, 243, 255, 0.25);
-    background: rgba(0, 0, 0, 0.25);
-}
-
-.competition-certificate img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 .competition-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-width: 0;
+}
+
+.competition-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.certificate-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 1px solid rgba(0, 243, 255, 0.55);
+    border-radius: 999px;
+    background: rgba(0, 243, 255, 0.08);
+    color: var(--neon-cyan);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.certificate-trigger:hover {
+    background: rgba(0, 243, 255, 0.16);
+    box-shadow: 0 0 18px rgba(0, 243, 255, 0.25);
+    transform: translateY(-2px);
 }
 
 .competition-label {
@@ -657,6 +674,20 @@ body {
     color: white;
     box-shadow: 0 0 35px rgba(0, 243, 255, 0.3);
     animation: zoomIn 0.3s ease;
+}
+
+.certificate-popup-content {
+    width: min(760px, 90vw);
+}
+
+.certificate-image {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 243, 255, 0.25);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 @keyframes zoomIn {

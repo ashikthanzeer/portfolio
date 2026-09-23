@@ -75,7 +75,7 @@ export const EDUCATION_LIST: EducationItem[] = [
     institution: "Indian Institute of Technology, Madras",
     degree: "Bachelor of Science, Data Science and Applications",
     period: "September 2025 – Present",
-    grade: "CGPA: 8.625 / 10",
+    grade: "CGPA: 8.63 / 10",
   },
   {
     institution: "Al Huda English School Neerkunnam",

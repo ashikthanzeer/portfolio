@@ -126,24 +126,7 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* Rectilinear Metrics Strip */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ ...springSmooth, delay: 0.3 }}
-          className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline border border-hairline rounded overflow-hidden"
-        >
-          {PERSONAL_INFO.metrics.map((metric) => (
-            <div key={metric.label} className="bg-surface p-4 flex flex-col justify-center transition-colors hover:bg-surface-hover">
-              <span className="text-xl sm:text-2xl font-bold text-content-primary tracking-tight font-mono">
-                <CountUp value={metric.value} isDecimal={metric.isDecimal} />
-                {metric.suffix}
-              </span>
-              <span className="text-xs text-content-muted mt-1">{metric.label}</span>
-            </div>
-          ))}
-        </motion.div>
+        
       </div>
     </section>
   );

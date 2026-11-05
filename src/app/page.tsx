@@ -18,7 +18,6 @@ export default function Home() {
       <Education />
       <Skills />
       <Projects />
-      <Hackathons />
       <Leadership />
       <WorkExperience />
       <Contact />

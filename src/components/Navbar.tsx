@@ -39,7 +39,6 @@ export const Navbar = () => {
     { label: "Education", href: "#education" },
     { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
-    { label: "Hackathons", href: "#hackathon" },
     { label: "Leadership", href: "#leadership" },
     { label: "Contact", href: "#contact" },
   ];

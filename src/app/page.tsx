@@ -15,11 +15,11 @@ export default function Home() {
     <main className="min-h-screen bg-bg text-content-primary selection:bg-copper selection:text-bg">
       <Navbar />
       <Hero />
-      <Education />
       <Skills />
       <Projects />
-      <Leadership />
       <WorkExperience />
+      <Leadership />
+      <Education />
       <Contact />
       <Footer />
     </main>

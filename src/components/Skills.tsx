@@ -42,7 +42,7 @@ export const Skills = () => {
                 </h3>
               </div>
               
-              <div className="relative z-10 flex flex-wrap gap-2 mt-auto">
+              <div className="relative z-10 flex flex-wrap gap-2">
                 {category.skills.map((skill, sIdx) => (
                   <motion.span
                     key={skill}

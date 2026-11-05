@@ -8,7 +8,7 @@ import { InteractiveCard } from "./ui/InteractiveCard";
 import { variantA, staggerContainer, SplitText } from "@/utils/animations";
 import { MagneticButton } from "./ui/MagneticButton";
 
-const categories = ["All", "AI & Systems", "Web & Platforms", "Automation & Tools"];
+const categories = ["All", "AI & Systems", "Web & Platforms", "Automation & Tools", "Enterprise Software"];
 
 export const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -45,11 +45,10 @@ export const Projects = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 text-xs md:text-sm font-medium rounded transition-all duration-300 ${
-                activeCategory === category
-                  ? "bg-primary text-bg"
-                  : "bg-surface border border-hairline text-content-muted hover:text-content-primary hover:border-primary/40"
-              }`}
+              className={`px-4 py-2 text-xs md:text-sm font-medium rounded transition-all duration-300 ${activeCategory === category
+                ? "bg-primary text-bg"
+                : "bg-surface border border-hairline text-content-muted hover:text-content-primary hover:border-primary/40"
+                }`}
             >
               {category}
             </button>
@@ -77,19 +76,35 @@ export const Projects = () => {
                       </svg>
                     </div>
                     <div className="flex gap-2">
-                      <MagneticButton className="p-1.5 text-content-muted hover:text-primary transition-colors">
-                        <Github className="w-4 h-4" />
-                      </MagneticButton>
-                      <MagneticButton className="p-1.5 text-content-muted hover:text-primary transition-colors">
-                        <ExternalLink className="w-4 h-4" />
-                      </MagneticButton>
+                      {project.githubUrl && (
+                        <MagneticButton className="p-1.5 text-content-muted hover:text-primary transition-colors">
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4" />
+                          </a>
+                        </MagneticButton>
+                      )}
+                      {project.liveUrl && (
+                        <MagneticButton className="p-1.5 text-content-muted hover:text-primary transition-colors">
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        </MagneticButton>
+                      )}
                     </div>
                   </div>
 
                   <h3 className="text-xl font-semibold text-content-primary mb-3 relative z-10 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <div className="space-y-2 mb-6 relative z-10 flex-grow">
                     {project.points.slice(0, 2).map((point, i) => (
                       <p key={i} className="text-sm text-content-muted leading-relaxed">

@@ -6,9 +6,9 @@ import { Skills } from "@/components/Skills";
 import { Projects } from "@/components/Projects";
 import { Hackathons } from "@/components/Hackathons";
 import { Leadership } from "@/components/Leadership";
-import { Volunteering } from "@/components/Volunteering";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { WorkExperience } from "@/components/WorkExperience";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <Projects />
       <Hackathons />
       <Leadership />
-      <Volunteering />
+      <WorkExperience />
       <Contact />
       <Footer />
     </main>
